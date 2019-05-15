@@ -1,5 +1,9 @@
 # hrext09-my-cruddy-app
 Create Read Update and Delete framework using JS
+ ## Description
+ Create an app to schedule food pick up;
+ restaurant = [name, location, types of cuisine, hours, menu];
+ customer = [name, email, phone number, order number, pick-up time]
 
  ## Tasks
 
