@@ -2,8 +2,8 @@
 Create Read Update and Delete framework using JS
  ## Description
  Create an app to schedule food pick up;
- restaurant = [name, location, types of cuisine, hours, menu];
- customer = [name, email, phone number, order number, pick-up time]
+ restaurant = [name, location, (distance?), types of cuisine, hours, menu];
+ customer = [name, email, phone number, (location?),order info[order number, order item, total price, pick-up time ]]
 
  ## Tasks
 
