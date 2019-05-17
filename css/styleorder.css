@@ -40,7 +40,7 @@ body{
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: url('../food1.jpg');
+  background-color: rgb(39, 86, 101);
   background-position: center;
   background-repeat: no-repeat;
   background-size:  cover;

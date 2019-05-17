@@ -45,27 +45,24 @@ var keyExists = function(key) {
 //event handlers for the buttons and ... possibly the inputboxes
   //preventdefault on button clicks
 $(document).ready(function() {
-  $('#createButton').click(function(event) {
-    event.preventDefault();
-
-    var currentKey = $("#keyInput").val();
-    var currentValue = $("#valueInput").val();
-    if (keyExists(currentKey)) {
-      //current key exists, do something error-handle-y
-    } else {
-      createItem(currentKey, currentValue);
-    }
+  $("#logo").click(function(){
+    location.href="index.html";
   });
-
-  $('#updateButton').click(function(event) {
-    event.preventDefault();
-
-    var currentKey = $("#keyInput").val();
-    var currentValue = $("#valueInput").val();
-    if (keyExists(currentKey)) {
-      updateItem(currentKey, currentValue);
-    } else {
-      //current key doesnt exist, do stuff
-    }
+  $("#userName").click(function(){
+    location.href="userinfo.html";
   });
-});
+  $('#btn-search').click(function(){
+    location.href="orderpage.html"
+  })
+
+
+
+
+
+
+
+
+
+
+
+})

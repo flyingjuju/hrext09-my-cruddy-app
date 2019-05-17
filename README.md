@@ -2,6 +2,7 @@
 Create Read Update and Delete framework using JS
  ## Description
  Create an app to schedule food pick up;
+ Searching food craving and show lists of restaurants provides that food.
  restaurant = [name, location, (distance?), types of cuisine, hours, menu];
  customer = [name, email, phone number, (location?),order info[order number, order item, total price, pick-up time ]]
 
