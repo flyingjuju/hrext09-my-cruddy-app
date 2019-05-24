@@ -15,7 +15,6 @@ body{
 #header{
   width: 100%;
   height: auto;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -23,6 +22,7 @@ body{
 }
 #logo, #userName{
   margin: 15px;
+  cursor: pointer;
 }
 #logo{
   font-family: 'Pacifico',fantasy;
@@ -30,8 +30,43 @@ body{
   font-weight: 900;
 }
 #userName{
-  font-family: 'Arial';
-  text-decoration: underline;
+  width:200px;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+a{
+  text-decoration:underline;
+}
+#userLine{
+  
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  line-height: 25px;
+  cursor: pointer;
+}
+i{
+  margin-right: 5px;
+  margin-top: 3px;
+  line-height: 25px;
+
+}
+#cart{
+  background-color: #b1adad;
+  color:#1c1c1c;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 2px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 #content{
   width: 100%;
@@ -39,16 +74,18 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-image: url('../food1.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size:  cover;
   opacity: 0.9;
+  cursor: default;
 }
 
 
 #slogan{
+  margin-top: 150px;
   height: 2em;
   color: white;
   font-family: "Lato", sans-serif;
@@ -57,16 +94,21 @@ body{
   display:flex;
   flex-direction: row;
   align-items: center;
+  
 }
 
+#slogan #logo{
+  cursor: default;
+}
 #searchbar{
   height: 1.75em;
   margin: 0;
+  margin-top: 20px;
   padding: 0;
   padding-left: 10px;
   text-align: center;
-  background: white;
-  font-family: "Lato", sans-serif;
+/*  background: white;
+*/  font-family: "Lato", sans-serif;
   font-size: 1.2em;
   color: rgb(115, 110, 110);
   font-weight: bold;
@@ -74,7 +116,7 @@ body{
   align-items: center;
   border-radius: 12px;
 }
-#input-search{
+/*#input-search{
   height: 100%;
   margin: 0;
   margin-left: 10px;
@@ -83,14 +125,17 @@ body{
   font-family: "Lato", sans-serif;
   font-size:16px;
   font-weight: lighter;
-}
+  cursor: text;
+}*/
 #btn-search{
+  width: 150px;
   height: 100%;
+  padding: 5px;
   border: none;
-  border-radius: 0 12px 12px 0;
+  border-radius: 10px;
   background:red;
   color: white;
   font-family: "Lato", sans-serif;
   font-size: 1em;
-
+  cursor: pointer;
 }

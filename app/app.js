@@ -9,41 +9,7 @@
 
 */
 
-//localStorage interaction function
-//get item
-var getItem = function(key) {
-  return window.localStorage.getItem(key);
-}
 
-//create
-var createItem = function(key, value) {
-  return window.localStorage.setItem(key, value);
-}
-
-//update
-var updateItem = function(key, value) {
-  return window.localStorage.setItem(key, value);
-}
-
-//delete
-var deleteItem = function(key) {
-  return window.localStorage.removeItem(key);
-}
-
-//clear everything
-var clearEverything = function() {
-  return window.localStorage.clear();
-}
-
-var keyExists = function(key) {
-  var currentValue = getItem(key);
-  return currentValue !== null;
-}
-
-
-///////////////////////////////////////////
-//event handlers for the buttons and ... possibly the inputboxes
-  //preventdefault on button clicks
 $(document).ready(function() {
   $("#logo").click(function(){
     location.href="index.html";
@@ -55,14 +21,12 @@ $(document).ready(function() {
     location.href="orderpage.html"
   })
 
-
-
-
-
-
-
-
-
-
+  var totalAmount=0;
+  
+  for(var i=0;i<localStorage.length; i++) {
+      var item = localStorage.key(i); 
+      totalAmount += JSON.parse(localStorage.getItem(item)).amount
+  }
+  $('#cart').text(totalAmount.toString())
 
 })

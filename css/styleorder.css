@@ -4,6 +4,7 @@
 */
 body{
   width:100%;
+  min-width: 900px;
   margin: 0;
   padding: 0;
   display: flex;
@@ -15,7 +16,6 @@ body{
 #header{
   width: 100%;
   height: auto;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -23,6 +23,7 @@ body{
 }
 #logo, #userName{
   margin: 15px;
+  cursor: pointer;
 }
 #logo{
   font-family: 'Pacifico',fantasy;
@@ -30,38 +31,101 @@ body{
   font-weight: 900;
 }
 #userName{
-  font-family: 'Arial';
-  text-decoration: underline;
+  font-family: "Lato", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 200px;
+  height: 25px;
+  cursor: default;
 }
+a{
+  text-decoration:underline;
+}
+#userLine{
+  
+  width: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  line-height: 25px;
+  cursor: pointer;
+
+}
+#userPanel{
+  position: absolute;
+  width: 220px;
+  height: auto;
+  background: #b1adad;
+  color:#1c1c1c;
+  z-index: 1;
+  margin-right: 5px;
+  margin-top: 30px;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  cursor: default;
+  border-radius: 5px;
+}
+
+i{
+  margin-right: 5px;
+  margin-top: 3px;
+  line-height: 25px;
+
+}
+#cart{
+  background-color: #b1adad;
+  color:#1c1c1c;
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-top: 2px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.orders{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 1.2em;
+  margin:2px;
+  padding: 2px;
+}
+
+#lastOrder{
+  text-align: left;
+  line-height: 1.2em;
+  margin:2px;
+  border-bottom-style: double;
+}
+.total{
+  border-top: 1px solid #1c1c1c;
+  text-align: right;
+}
+
 #content{
   width: 100%;
-  height: 500px;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  background-color: rgb(39, 86, 101);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size:  cover;
-  opacity: 0.9;
+  justify-content: flex-start;
+  background-color: rgb(255, 255, 255);
+  cursor: default;
+
 }
 
-
-#slogan{
-  height: 2em;
-  color: white;
-  font-family: "Lato", sans-serif;
-  font-size:2em;
-  text-shadow: 1px 2px 4px rgba(0,0,0,.5);
-  display:flex;
-  flex-direction: row;
-  align-items: center;
-}
 
 #searchbar{
   height: 1.75em;
-  margin: 0;
+  margin-left: 100px;
   padding: 0;
   padding-left: 10px;
   text-align: center;
@@ -73,6 +137,7 @@ body{
   display: flex;
   align-items: center;
   border-radius: 12px;
+  cursor: default;
 }
 #input-search{
   height: 100%;
@@ -83,6 +148,7 @@ body{
   font-family: "Lato", sans-serif;
   font-size:16px;
   font-weight: lighter;
+  cursor: text;
 }
 #btn-search{
   height: 100%;
@@ -92,5 +158,153 @@ body{
   color: white;
   font-family: "Lato", sans-serif;
   font-size: 1em;
-
+  cursor: pointer;
 }
+
+
+.restaurant{
+
+  width: 90%;
+  margin: 20px 15px;
+  border-bottom: 1px solid #b1adad;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-size:1em;
+  color: #333;
+}
+img{
+  margin: 10px;
+  padding: 0;
+  width: 250px;
+  height: 250px;
+  border: 0;
+  border-radius: 10px;
+}
+.info{
+  width: 100%;
+  margin: 0 0 10px 10px;
+  display: flex;
+  flex-direction: column;
+}
+.name{
+  font-family:"Lato", sans-serif;
+  font-size: 1.75em;
+  font-weight: bold;
+}
+.category{
+  color: #b1adad;
+}
+.category, .phone, .address1, .address2, .hour{
+  line-height: 1.15em;
+}
+#distance1, #distance2{
+   color: #7F7F7F;
+   margin-left: 10px;
+}
+h3{
+  width: 100%;
+  margin: 10px 0 5px 0;
+  line-height: 1.3em;
+  background: #302e2e;
+  color:#b1adad;
+  font-size:1em;
+}
+.menu{
+  display: flex;
+  flex-direction: column;
+/*  align-content: space-around;
+*/}
+.food{
+  width: 100%;
+  margin: 5px 2px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-size:0.9em;
+  line-height: 1.1em;
+  border-bottom: 1px solid #e6e6e6;
+}
+.food:last-of-type{
+  border: 0;
+}
+
+.food h4{
+  width: 100%
+  line-height: 1.1em;
+  margin: 5px 0;
+  /*font-size:1.1em;
+  font-weight: 600;*/
+  color:#0073bb;
+}
+.foodinfo{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.food p {
+  width: 75%;
+  line-height: 1em;
+  margin: 2px 0;
+}
+
+.price{
+  width: 10%;
+  text-align: center;
+}
+
+.buttons{
+  width:60px;
+  margin-left: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  align-content: space-around;
+}
+
+.buttons button{
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: space-between;
+}
+.buttons span:first-of-type{
+  margin: 0 5px;
+}
+#confirm{
+  width: 100%;
+  padding-right:15px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+#btn-addCart{
+  font-size:1.2em;
+  background-color: #0073bb;
+  color: white;
+  border: none;
+  margin:10px 40px 10px 10px;
+}
+#btn-confirm{
+  font-size:1.2em;
+  background-color: #0073bb;
+  color: white;
+  border: none;
+  margin:10px 40px 10px 10px;
+}
+
+#result{
+  border: 1px solid blue;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  color: black;
+}
+

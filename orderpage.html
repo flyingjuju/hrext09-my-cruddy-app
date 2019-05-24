@@ -2,29 +2,139 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UPick-flyingjuju</title>
+  <title>QikPik-flyingjuju</title>
   <script
           src="https://code.jquery.com/jquery-3.3.1.js"
           integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
           crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" type="text/css" href="css/styleorder.css">
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?&units=imperial&key=AIzaSyDHuNL3sFPygvKbkvcH90KG9THi_a1-Pqo"></script>
+
 </head>
 <body>
   <div id="header">
 
-      <div id="logo">UPick</div>
-      <div id="userName">flyingjuju</a></div>
+      <div id="logo">QikPik</div>
+      <div id="searchbar">
+          <span>Location  </span><input id="input-search" type="text" size="40" placeholder="  94105"></input>
+          <button id="btn-search" type='button'>Q</button>
+      </div>
+      <div id="userName">
+        <div id="userLine"><i class="fa fa-shopping-cart"></i><a>flyingjuju</a><div id="cart"><span>0</span></div></div> 
+        <div id="userPanel" style="display: none"></div>
+        
+      </div>
+
+      
   </div>
   <div id="content">
-
+    <div class="restaurant" style="display: none">
+      <div class="image"><img src="garaje2.jpg"></div>
+      <div class="info">
+        <div class="name">Garaje</div>
+        <div class="category">Mexican</div>
+        <div class="phone">(415) 644-0838</div>
+        <div class="address1"><span>475 3rd St, San Francisco, CA 94107 </span><span id="distance1"></span></div>
+        <div class="hour">Mon-Sat 11:00am - 10:00pm</div>
+        <div class="menu">
+          <h3>Avaliable Items</h3>
+          <div class="food">
+          <h4>Jose Wong</h4>
+          <div class="foodinfo">
+            <p>Hacked marinated chicken thighs, broken corn chips,
+              fiery hoisin chile pressing, peanuts, sesame seeds.</p>
+            <div class="price">$9.00</div>
+            <div class="buttons"> 
+              <button class='less'><span>-</span></button>
+              <span>0</span>
+              <button class='more'><span>+</span></button>
+            </div>
+          </div>
+          </div>
+        
+        
+        <div class="food">
+          <h4>Cali Steak</h4>
+          <div class="foodinfo">
+            <p>Skirt steak asada, jack, fries, avo, pico.</p>
+            <div class="price">$8.00</div>
+            <div class="buttons"> 
+              <button class='less'><span>-</span></button>
+              <span>0</span>
+              <button class='more'><span>+</span></button>
+            </div>
+          </div>
+        </div>
+        <div class="food">
+          <h4>Grilled Fish Taco</h4>
+          <div class="foodinfo">
+            <p>Sustainable tilapia , cabbage, cilantro lime mayo, la palma corn torts.</p>
+            <div class="price">$4.00</div>
+            <div class="buttons"> 
+              <button class='less'><span>-</span></button>
+              <span>0</span>
+              <button class='more'><span>+</span></button>
+            </div>
+          </div>
+        </div>
+      </div>  
+      </div>
+    </div>
+    <div class="restaurant" style="display: none">
+      <div class="image"><img src="branda.jpg"></div>
+      <div class="info">
+        <div class="name">Brenda's French Soul Food</div>
+        <div class="category">Brunch, French, Soul Food</div>
+        <div class="phone">(415) 345-8100</div>
+        <div class="address2"><span>652 Polk St, San Francisco, CA 94102</span><span id="distance2"></span></div>
+        <div class="hour">Mon-Tue 8:00am - 3:00pm Wed-Sat 8:00am - 10:00pm</div>
+        <div class="menu">
+          <h3>Avaliable Items</h3>
+          <div class="food">
+          <h4>Crawfish Beignets</h4>
+          <div class="foodinfo">
+            <p>Spiced with cayenne, scallions and cheddar. Three per order.</p>
+            <div class="price">$12.00</div>
+            <div class="buttons"> 
+              <button class='less'><span>-</span></button>
+              <span>0</span>
+              <button class='more'><span>+</span></button>
+            </div>
+          </div>
+          </div>
+        
+        
+        <div class="food">
+          <h4>Hangtown Fry</h4>
+          <div class="foodinfo">
+            <p>Crispy oyster, bacon and callion scramble, with grits or hash, plus cream biscuit or toast.</p>
+            <div class="price">$17.00</div>
+            <div class="buttons"> 
+              <button class='less'><span>-</span></button>
+              <span>0</span>
+              <button class='more'><span>+</span></button>
+            </div>
+          </div>
+        </div>
+        
+      </div>  
+      </div>
+    </div>
+    <div id="confirm" style="display: none">
+      <button id="btn-addCart" >Refresh Cart</button>
+      <button id="btn-confirm" >Check Out</button>
+    </div> 
   </div>
+  
   <div id="footer">
+    
     Copyright2019&#169;flyingjuju
   </div>
 
 
-  <script src='app/app.js'></script>
+  <script src='app/cssorder.js'></script>
 
 </body>
 </html>

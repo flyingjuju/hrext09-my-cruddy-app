@@ -2,29 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>UPick-flyingjuju</title>
+  <title>QikPik-flyingjuju</title>
   <script
           src="https://code.jquery.com/jquery-3.3.1.js"
           integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
           crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js"></script>
-  <link rel="stylesheet" type="text/css" href="css/styleorder.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styleuser.css">
 </head>
 <body>
   <div id="header">
-
-      <div id="logo">UPick</div>
-      <div id="userName">flyingjuju</a></div>
+      <div id="logo">QikPik</div>
+      <div id="userName">
+      <i class="fa fa-shopping-cart"></i> flyingjuju
+      </div>
   </div>
   <div id="content">
-
+    <div class="title">
+      <div class="lo">View Cart</div>
+      <span>
+        <div class="quantity">Quantity</div>
+        <div class="price">Price</div>
+      </span>
+    </div>
+    <div id="lastOrder">
+      
+    </div>
+    <div id="back">
+      <button id="btn-back">Back to Home</button>
+    </div> 
   </div>
   <div id="footer">
     Copyright2019&#169;flyingjuju
   </div>
 
 
-  <script src='app/app.js'></script>
+  <script src='app/userinfo.js'></script>
 
 </body>
 </html>
